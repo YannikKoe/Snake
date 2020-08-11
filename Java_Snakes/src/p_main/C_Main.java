@@ -1,5 +1,7 @@
 package p_main;
 
+
+
 /**
  * Ein Snake-Programm in Java. 
  * Diese Klasse soll zur Ausführung des Programms dienen. 
@@ -15,8 +17,8 @@ public class C_Main {
 	 * @param args Kommandozeilenparameter
 	 */
 	public static void main(String[] args) {
-		C_Board test = new C_Board();
 		
+		new C_Board();
 		
 	}
 
