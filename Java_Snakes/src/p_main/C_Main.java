@@ -4,9 +4,9 @@ package p_main;
 
 /**
  * Ein Snake-Programm in Java. 
- * Diese Klasse soll zur Ausführung des Programms dienen. 
+ * Diese Klasse soll zur Ausfuehrung des Programms dienen. 
  * 
- * @author Yannik Kösling
+ * @author Yannik Koesling
  * @version 1.0
  */
 public class C_Main {

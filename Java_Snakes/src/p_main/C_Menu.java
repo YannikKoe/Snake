@@ -1,8 +1,8 @@
 package p_main;
 /**
- * Diese Klasse generiert das Hauptmenü.
+ * Diese Klasse generiert das Hauptmenue.
  * 
- * @author Yannik Kösling
+ * @author Yannik Koesling
  * @version 1.0
  */
 public class C_Menu {

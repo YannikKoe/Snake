@@ -9,7 +9,7 @@ import javax.swing.*;
 /**
  * Diese Klasse dient zur Erzeugung des Spielfeldes
  * 
- * @author Yannik KÃ¶sling
+ * @author Yannik Kösling
  * @version 1.0
  */
 public class C_Board extends JFrame implements ItemListener {
@@ -39,11 +39,11 @@ public class C_Board extends JFrame implements ItemListener {
 	private void m_buildBoard() {
 	
 		setTitle("Welcome to Snake!");	
-		setSize(k_width, k_height); 					//FenstergrÃ¶ÃŸe
+		setSize(k_width, k_height); 					//Fenstergröße
 		setLocationRelativeTo(null); 			 		//Platziert Fenster in der Mitte
 		setVisible(true);
 		setDefaultCloseOperation(EXIT_ON_CLOSE); 		//Beendet Applikation sobald auf 'x'-Knopf gedrÃ¼ckt wird
-		setResizable(true);   							// Damit Fenster vergrÃ¶ÃŸert/verkleinert werden kann
+		setResizable(true);   							// Damit Fenster vergroessert/verkleinert werden kann
 		
 		m_setControls();
 		
@@ -64,7 +64,7 @@ public class C_Board extends JFrame implements ItemListener {
 	}
 
 	/**
-	 * Eventhandler beziehungsweise Behandler fÃ¼r ItemListener
+	 * Eventhandler beziehungsweise Behandler für ItemListener
 	 */
 	public void itemStateChanged(ItemEvent e) {
 		
