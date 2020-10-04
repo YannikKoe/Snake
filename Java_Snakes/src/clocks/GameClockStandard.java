@@ -2,6 +2,8 @@ package clocks;
 
 import actions.Collision;
 import game.Snake;
+import gui.GameOver;
+import gui.Gui;
 
 public class GameClockStandard extends Thread{
     public static boolean running = true;
@@ -37,12 +39,15 @@ public class GameClockStandard extends Thread{
                 Collision.collidePickUp();
                                                 	
                 	if(Collision.collideSelf() || Collision.collideWall()){
+                		
+                		Snake.paused = true;      		
+                    	new GameOver();                    	
+                    	
                     	Snake.tails.clear();
                     	Snake.head.setX(7);
                     	Snake.head.setY(7);
                     	Snake.score = 0;
                     	sleepTime=500;
-                    	
                 	}
                 
             } catch (InterruptedException e) {

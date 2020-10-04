@@ -16,7 +16,7 @@ public class Draw extends JLabel {
         g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_OFF);
 
         //Draw Background
-        g.setColor(Color.LIGHT_GRAY);
+        g.setColor(Color.WHITE);
         g.fillRect(0, 0, Gui.width, Gui.height);
 
         //Draw Snake Tails
@@ -37,7 +37,7 @@ public class Draw extends JLabel {
         g.fillRect(p.x,p.y, 32,32);
 
         //Draw Grid
-        g.setColor(Color.GRAY);
+        g.setColor(Color.LIGHT_GRAY);
         for (int i = 0; i < 16; i++) {
             for (int j = 0; j < 16; j++) {
                 g.drawRect(i * 32 + Gui.xoff, j * 32 + Gui.yoff, 32, 32);

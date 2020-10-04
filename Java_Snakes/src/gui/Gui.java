@@ -5,7 +5,7 @@ import actions.KeyHandler;
 import javax.swing.*;
 
 public class Gui {
-    JFrame jf;
+    public static JFrame jf;
     Draw d;
 
     public static int width = 800, height = 600;

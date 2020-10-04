@@ -1,7 +1,10 @@
 package clocks;
 
+import javax.swing.JLabel;
+
 import actions.Collision;
 import game.Snake;
+import gui.GameOver;
 import gui.Gui;
 
 public class GameClockFree extends Thread{
@@ -13,11 +16,11 @@ public class GameClockFree extends Thread{
 
         while(running){
         	
-        	//Sleep(1) nötig, sonst kommt er bei "pause" nicht mehr raus
+        	//Sleep(1) noetig, sonst kommt er bei "pause" nicht mehr raus
         	try {
 				sleep(1);
 			} catch (InterruptedException e1) {
-				// TODO Auto-generated catch block
+			
 				e1.printStackTrace();
 			}
         	
@@ -26,7 +29,7 @@ public class GameClockFree extends Thread{
         	}
         	
         	if(Snake.tails.size() < 1) {
-        		Snake.addInitialLength();        		
+        		Snake.addInitialLength();
         	}
         	
             try {
@@ -53,12 +56,15 @@ public class GameClockFree extends Thread{
                 	}
                 
                 	if(Collision.collideSelf()){
+                		
+                		Snake.paused = true;
+                    	new GameOver();
+                    	                                            	
                     	Snake.tails.clear();
                     	Snake.head.setX(7);
                     	Snake.head.setY(7);
                     	Snake.score = 0;
-                    	sleepTime=500;
-                    	
+                    	sleepTime=500;  
                 	}
                 
             } catch (InterruptedException e) {

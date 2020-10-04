@@ -2,6 +2,8 @@ package actions;
 
 import game.Dir;
 import game.Snake;
+import gui.Draw;
+import gui.GameOver;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -39,30 +41,26 @@ public class KeyHandler implements KeyListener {
                     Snake.head.setDir(Dir.RIGHT);
                     Snake.waitToMove = true;
                 }
-                break;           
+                break;
+            
         }
     }
-
+    
+    
     @Override
-    /*
-     * Für Game Over gedacht -> Restart
-     */
     public void keyTyped(KeyEvent e) {
-    	switch (e.getKeyCode()) {
-    		case KeyEvent.VK_SPACE:
-    			break;
-    	}
+    	
     }
     
     @Override
     /*
-     * Für Pause Key
+     * For Pause Key
      */
     public void keyReleased(KeyEvent e) {
     	switch (e.getKeyCode()) {
     	case KeyEvent.VK_P:
         	if(Snake.paused == false) {
-        		Snake.paused = true;            		
+        		Snake.paused = true;
         	}else {
         		Snake.paused = false;  
         	}           	
