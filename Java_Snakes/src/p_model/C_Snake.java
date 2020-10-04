@@ -1,11 +1,11 @@
-package game;
-
-import gui.Gui;
+package p_model;
 
 import java.awt.*;
 import java.util.ArrayList;
 
-public class Snake {
+import p_view.C_Game;
+
+public class C_Snake {
 
     public static int score = 0, bestscore = 0;
 
@@ -13,23 +13,23 @@ public class Snake {
     
     public static boolean paused = false;
 
-    public static Head head = new Head(7, 7);
+    public static C_Head head = new C_Head(7, 7);
 
-    public static ArrayList<Tail> tails = new ArrayList<>();
+    public static ArrayList<C_Body> tails = new ArrayList<>();
     
-    public static PickUp pickup = new PickUp();
+    public static C_Food pickup = new C_Food();
     
     //Schlange kriegt eine initiale Länge von 5
     public static void addInitialLength() {
-    	tails.add(new Tail(head.getX(), head.getY()));
+    	tails.add(new C_Body(head.getX(), head.getY()));
     	for (int i = 0; i < 4; i++) {
-    		tails.add(new Tail(tails.get(tails.size() - 1).x, tails.get(tails.size() - 1).y));			
+    		tails.add(new C_Body(tails.get(tails.size() - 1).x, tails.get(tails.size() - 1).y));			
 		}
     }
     
     //fügt 1 Body hinzu
     public static void addTail() {
-        tails.add(new Tail(tails.get(tails.size() - 1).x, tails.get(tails.size() - 1).y));
+        tails.add(new C_Body(tails.get(tails.size() - 1).x, tails.get(tails.size() - 1).y));
     }
       
     public static void move() {
@@ -76,8 +76,8 @@ public class Snake {
     //Position to Coordiantes
     public static Point ptc(int x, int y) {
         Point p = new Point(0, 0);
-        p.x = x * 32 + Gui.xoff;
-        p.y = y * 32 + Gui.yoff;
+        p.x = x * 32 + C_Game.xoff;
+        p.y = y * 32 + C_Game.yoff;
 
         return p;
     }

@@ -1,10 +1,10 @@
-package game;
+package p_model;
 
-public class Tail {
+public class C_Body {
     int x,y;
     boolean wait = true;
 
-    public Tail(int x, int y) {
+    public C_Body(int x, int y) {
         this.x = x;
         this.y = y;
     }

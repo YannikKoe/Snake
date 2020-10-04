@@ -1,10 +1,11 @@
-package gui;
+package p_view;
 
 import java.awt.*;
 import javax.swing.*;
-import actions.ActionHandler;
 
-public class StartMenue {
+import p_monitor.C_ActionHandler;
+
+public class C_StartMenue {
 	
 	/**
 	 * Deklaration und Initialisierung der Variablen und Konstanten
@@ -33,7 +34,7 @@ public class StartMenue {
 	/**
 	 * Konstruktor
 	 */
-	public StartMenue() {
+	public C_StartMenue() {
 		
 		frame.setTitle("Welcome to Snake!");	
 		frame.setSize(k_width, k_height);
@@ -83,7 +84,7 @@ public class StartMenue {
 		o_panel.add(o_b_play);
 		o_b_play.setFont(new Font ("Arial", Font.BOLD, 20));
 		o_b_play.setBounds(300, 400, 200, 50);
-		o_b_play.addActionListener(new ActionHandler());
+		o_b_play.addActionListener(new C_ActionHandler());
 	}
 	
 }

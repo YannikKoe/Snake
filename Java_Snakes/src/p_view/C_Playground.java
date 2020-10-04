@@ -1,12 +1,13 @@
-package gui;
-
-import game.Snake;
-import game.Tail;
+package p_view;
 
 import javax.swing.*;
+
+import p_model.C_Snake;
+import p_model.C_Body;
+
 import java.awt.*;
 
-public class Draw extends JLabel {
+public class C_Playground extends JLabel {
 
     Point p;
 
@@ -17,41 +18,41 @@ public class Draw extends JLabel {
 
         //Draw Background
         g.setColor(Color.WHITE);
-        g.fillRect(0, 0, Gui.width, Gui.height);
+        g.fillRect(0, 0, C_Game.width, C_Game.height);
 
         //Draw Snake Tails
         g.setColor(new Color(0, 0, 128));
-        for (int i = 0; i < Snake.tails.size(); i++) {
-            p = Snake.ptc(Snake.tails.get(i).getX(), Snake.tails.get(i).getY());
+        for (int i = 0; i < C_Snake.tails.size(); i++) {
+            p = C_Snake.ptc(C_Snake.tails.get(i).getX(), C_Snake.tails.get(i).getY());
             g.fillOval(p.x, p.y, 32, 32);
         }
         
         //Draw Snake Head
         g.setColor(new Color(0,153,0));
-        p = Snake.ptc(Snake.head.getX(),Snake.head.getY());
+        p = C_Snake.ptc(C_Snake.head.getX(),C_Snake.head.getY());
         g.fillRect(p.x,p.y,32,32);
 
         //Draw PickUp
         g.setColor(new Color(204,51,0));
-        p = Snake.ptc(Snake.pickup.getX(), Snake.pickup.getY());
-        g.fillRect(p.x,p.y, 32,32);
+        p = C_Snake.ptc(C_Snake.pickup.getX(), C_Snake.pickup.getY());
+        g.fillOval(p.x,p.y, 32,32);
 
         //Draw Grid
         g.setColor(Color.LIGHT_GRAY);
         for (int i = 0; i < 16; i++) {
             for (int j = 0; j < 16; j++) {
-                g.drawRect(i * 32 + Gui.xoff, j * 32 + Gui.yoff, 32, 32);
+                g.drawRect(i * 32 + C_Game.xoff, j * 32 + C_Game.yoff, 32, 32);
             }
         }
 
         //Draw Border
         g.setColor(Color.BLACK);
-        g.drawRect(Gui.xoff, Gui.yoff, 512, 512);
+        g.drawRect(C_Game.xoff, C_Game.yoff, 512, 512);
 
         //Draw Score
         g.setFont(new Font("Arial", Font.BOLD, 20));
-        g.drawString("Score: "+Snake.score, 5,25);
-        g.drawString("Best: "+Snake.bestscore, 5,50);
+        g.drawString("Score: "+C_Snake.score, 5,25);
+        g.drawString("Best: "+C_Snake.bestscore, 5,50);
         g.drawString("Pause: P", 5, 75);
 
         repaint();
