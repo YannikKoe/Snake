@@ -1,11 +1,11 @@
-package game;
+package p_model;
 
 import java.util.concurrent.ThreadLocalRandom;
 
-public class PickUp {
+public class C_Food {
     int x, y;
 
-    public PickUp(){
+    public C_Food(){
         this.x = ThreadLocalRandom.current().nextInt(0,15);
         this.y = ThreadLocalRandom.current().nextInt(0,15);
     }

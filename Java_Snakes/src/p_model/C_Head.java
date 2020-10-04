@@ -1,19 +1,19 @@
-package game;
+package p_model;
 
-public class Head {
-    Dir dir = Dir.RIGHT;
+public class C_Head {
+    Enum_Route dir = Enum_Route.RIGHT;
     int x,y;
 
-    public Head(int x, int y) {
+    public C_Head(int x, int y) {
         this.x = x;
         this.y = y;
     }
 
-    public Dir getDir() {
+    public Enum_Route getDir() {
         return dir;
     }
 
-    public void setDir(Dir dir) {
+    public void setDir(Enum_Route dir) {
         this.dir = dir;
     }
 
