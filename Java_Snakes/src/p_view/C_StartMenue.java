@@ -1,10 +1,15 @@
+
 package p_view;
 
 import java.awt.*;
 import javax.swing.*;
-
 import p_monitor.C_ActionHandler;
 
+/**
+ * Autoren: Stephan Schellenberg, Jacob Waniek und Yannik Koesling
+ * Inhalt:  Erstellung einer GUI für das Startmenue
+ * 
+ */
 public class C_StartMenue {
 	
 	/**
@@ -12,79 +17,62 @@ public class C_StartMenue {
 	 */
 	private final int k_width  = 800, k_height = 600;
 	
-	/**
-	 * Deklaration und Initialisierung der Objekte
-	 */
 	// JPanel & JFrame
-	public static JFrame frame = new JFrame();
-	JPanel o_panel = new JPanel();
+	public static JFrame o_startFrame = new JFrame();
+	JPanel o_startPanel = new JPanel();
 	
 	//Titel
 	JLabel l_menueTitel = new JLabel("Snake Game");
 
-	//Modi
-	public static JRadioButton o_b_standard = new JRadioButton("Standard Mode");
-	public static JRadioButton o_b_freeMode = new JRadioButton("Free Mode");
-	boolean standardMode = true;
+	//Modi Buttons
+	public static JRadioButton rb_standardMode = new JRadioButton("Standard Mode");
+	public static JRadioButton rb_freeMode = new JRadioButton("Free Mode");
 	
 	//Start Button
-	public static JButton o_b_play = new JButton("Play");
+	public static JButton b_playButton = new JButton("Play");
 	
-	
-	/**
-	 * Konstruktor
-	 */
 	public C_StartMenue() {
 		
-		frame.setTitle("Welcome to Snake!");	
-		frame.setSize(k_width, k_height);
-		frame.setLocationRelativeTo(null);
-		frame.setVisible(true);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setResizable(false);
+		//Erstellung des Fensters
+		o_startFrame.setTitle("Welcome to Snake!");	
+		o_startFrame.setSize(k_width, k_height);
+		o_startFrame.setLocationRelativeTo(null);
+		o_startFrame.setVisible(true);
+		o_startFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		o_startFrame.setResizable(false);
 		
-		frame.add(o_panel);
-		o_panel.setBackground(Color.WHITE);  			
-		o_panel.updateUI();
+		o_startFrame.add(o_startPanel);
+		o_startPanel.setBackground(Color.WHITE);  			
+		o_startPanel.updateUI();
 		
-		m_addButtons();
-	}
-	
-	
-	/**
-	 * Fuegt alle Text-Felder und Buttons dem JFrame zu
-	 */
-	public void m_addButtons() {
-		
-		//Titel
-		o_panel.setLayout(null);
-		o_panel.add(l_menueTitel);
+		//Formatierung des Titels
+		o_startPanel.setLayout(null);
+		o_startPanel.add(l_menueTitel);
 		l_menueTitel.setFont(new Font ("Arial", Font.BOLD, 100));
 		l_menueTitel.setForeground(Color.RED);
 		l_menueTitel.setBounds(100, 80, 800, 100);
+				
+		//Formatierung der Radio Buttons für die Modi
+		o_startPanel.add(rb_standardMode);
+		rb_standardMode.setBounds(200, 250, 195, 60);
+		rb_standardMode.setFont(new Font ("Arial", Font.BOLD, 20));
 		
-		//Modi
-		o_panel.add(o_b_standard);
-		o_b_standard.setBounds(200, 250, 195, 60);
-		o_b_standard.setFont(new Font ("Arial", Font.BOLD, 20));
-		o_panel.add(o_b_freeMode);
-		o_b_freeMode.setBounds(405, 250, 195, 60);
-		o_b_freeMode.setFont(new Font ("Arial", Font.BOLD, 20));
+		o_startPanel.add(rb_freeMode);
+		rb_freeMode.setBounds(405, 250, 195, 60);
+		rb_freeMode.setFont(new Font ("Arial", Font.BOLD, 20));
 		
-		//Radio Buttons for modes with selected Standard Mode 
-		o_b_standard.setEnabled(true);
-		o_b_freeMode.setEnabled(true);
-		
+		//Button Group für Modi Buttons und vorausgewaehltem Standardmodus
 		ButtonGroup rb_mode = new ButtonGroup();
-		rb_mode.add(o_b_standard);
-		rb_mode.add(o_b_freeMode);
-		o_b_standard.setSelected(true);
+		rb_mode.add(rb_standardMode);
+		rb_mode.add(rb_freeMode);
+		rb_standardMode.setSelected(true);
+				
+		//Formatierung des Start Buttons
+		o_startPanel.add(b_playButton);
+		b_playButton.setFont(new Font ("Arial", Font.BOLD, 20));
+		b_playButton.setBounds(300, 400, 200, 50);
+		b_playButton.addActionListener(new C_ActionHandler());
 		
-		//Start Button
-		o_panel.add(o_b_play);
-		o_b_play.setFont(new Font ("Arial", Font.BOLD, 20));
-		o_b_play.setBounds(300, 400, 200, 50);
-		o_b_play.addActionListener(new C_ActionHandler());
 	}
 	
 }

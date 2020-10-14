@@ -1,5 +1,8 @@
 package p_model;
-
+/**
+ * Autoren: Stephan Schellenberg, Jacob Waniek und Yannik Koesling
+ * Inhalt: Setter und Getter (u.A. auch "wait" für den move) für den Body der Schlange
+ */
 public class C_Body {
     int x,y;
     boolean wait = true;
@@ -25,11 +28,11 @@ public class C_Body {
         this.y = y;
     }
 
-    public boolean isWait() {
+    public boolean m_isWaiting() {
         return wait;
     }
 
-    public void setWait(boolean wait) {
+    public void m_setWaiting(boolean wait) {
         this.wait = wait;
     }
 }
