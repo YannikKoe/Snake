@@ -1,7 +1,10 @@
 package p_model;
 
 import java.util.concurrent.ThreadLocalRandom;
-
+/**
+ * Autoren: Stephan Schellenberg, Jacob Waniek und Yannik Koesling
+ * Inhalt: Setter und Getter des Foods. Zufaellige Position fuer die Platzierung des Foods.
+ */
 public class C_Food {
     int x, y;
 
@@ -10,7 +13,7 @@ public class C_Food {
         this.y = ThreadLocalRandom.current().nextInt(0,15);
     }
 
-    public void reset(){
+    public void m_reset(){
         this.x = ThreadLocalRandom.current().nextInt(0,15);
         this.y = ThreadLocalRandom.current().nextInt(0,15);
     }

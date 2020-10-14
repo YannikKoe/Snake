@@ -1,7 +1,11 @@
 package p_model;
-
+/**
+ * Autoren: Stephan Schellenberg, Jacob Waniek und Yannik Koesling
+ * Inhalt: Beinhaltet neben Setter und Getter die fuer den Keyhandler notwendige Methoden
+ */
 public class C_Head {
-    Enum_Route dir = Enum_Route.RIGHT;
+	//Damit sich die Schlange am Anfang nach rechts bewegt
+    Enum_Route o_coordinate = Enum_Route.RIGHT;
     int x,y;
 
     public C_Head(int x, int y) {
@@ -9,12 +13,12 @@ public class C_Head {
         this.y = y;
     }
 
-    public Enum_Route getDir() {
-        return dir;
+    public Enum_Route getCoordinate() {
+        return o_coordinate;
     }
 
-    public void setDir(Enum_Route dir) {
-        this.dir = dir;
+    public void setCoordinate(Enum_Route coordinate) {
+        this.o_coordinate = coordinate;
     }
 
     public int getX() {

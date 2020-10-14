@@ -3,30 +3,33 @@ package p_view;
 import javax.swing.*;
 
 import p_monitor.C_KeyHandler;
-
+/**
+ * Autoren: Stephan Schellenberg, Jacob Waniek und Yannik Koesling
+ * 
+ */
 public class C_Game {
-    public static JFrame jf;
-    C_Playground d;
+    public static JFrame o_gameFrame;
+    C_Playground o_playground;
 
-    public static int width = 800, height = 600;
-    public static int xoff = 130, yoff = 20;
+    public static int v_width = 800, v_height = 600;
+    public static int v_xoff = 130, v_yoff = 20;
 
     public void create(){
-        jf = new JFrame("Welcome to Snake!");
-        jf.setSize(width,height);
-        jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        jf.setLocationRelativeTo(null);
-        jf.setLayout(null);
-        jf.setResizable(false);
-        jf.addKeyListener(new C_KeyHandler());
+        o_gameFrame = new JFrame("Welcome to Snake!");
+        o_gameFrame.setSize(v_width,v_height);
+        o_gameFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        o_gameFrame.setLocationRelativeTo(null);
+        o_gameFrame.setLayout(null);
+        o_gameFrame.setResizable(false);
+        o_gameFrame.addKeyListener(new C_KeyHandler());
 
-        d = new C_Playground();
-        d.setBounds(0,0,width,height);
-        d.setVisible(true);
-        jf.add(d);
+        o_playground = new C_Playground();
+        o_playground.setBounds(0,0,v_width,v_height);
+        o_playground.setVisible(true);
+        o_gameFrame.add(o_playground);
 
-        jf.requestFocus();
-        jf.setVisible(true);
+        o_gameFrame.requestFocus();
+        o_gameFrame.setVisible(true);
     }
     
 }

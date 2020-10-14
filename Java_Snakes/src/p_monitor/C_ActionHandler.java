@@ -11,31 +11,38 @@ import p_model.C_Snake;
 import p_view.C_GameOver;
 import p_view.C_Game;
 import p_view.C_StartMenue;
-
+/**
+ * Autoren: Stephan Schellenberg, Jacob Waniek und Yannik Koesling
+ * Inhalt: Ereignisbehandler fuer die Frames und Buttons
+ */
 public class C_ActionHandler implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 
-		if(e.getSource() == C_StartMenue.o_b_play) {
-			C_Game g = new C_Game();
-			C_StandardMode gc = new C_StandardMode();
-	        C_FreeMode gcf = new C_FreeMode();
+		//Auswahl des Modus
+		if(e.getSource() == C_StartMenue.b_playButton) {
+			C_Game o_game = new C_Game();
 	                
-	        if(C_StartMenue.o_b_standard.isSelected()) {
-	        	g.create();
-	        	gc.start();
-	        	C_StartMenue.frame.dispose();
+	        if(C_StartMenue.rb_standardMode.isSelected()) {
+	        	C_StandardMode o_standardMode = new C_StandardMode();
+	        	o_game.create();
+	        	o_standardMode.start();
+	        	C_StartMenue.o_startFrame.dispose();
 	        } else {
-	        	g.create();
-	        	gcf.start();
-	        	C_StartMenue.frame.dispose();
+	        	C_FreeMode o_freeMode = new C_FreeMode();
+	        	o_game.create();
+	        	o_freeMode.start();
+	        	C_StartMenue.o_startFrame.dispose();
 	        }
-	        
-		} else if(e.getSource() == C_GameOver.restart) {
-			C_GameOver.frame.dispose();
-            C_Snake.paused = false;
-		} else if(e.getSource() == C_GameOver.exit) {
+	    
+	    //Neustart auf restart Knopfdruck im GameOver Frame
+		} else if(e.getSource() == C_GameOver.b_restartButton) {
+			C_GameOver.o_gameOverFrame.dispose();
+            C_Snake.v_paused = false;
+        
+        //Spiel beenden bei exit Knopfdruck im Game Over Frame
+		} else if(e.getSource() == C_GameOver.b_exitButton) {
 			System.exit(0);
 		}
 		
