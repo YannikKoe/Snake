@@ -7,7 +7,7 @@ import p_monitor.C_Collision;
 import p_view.C_GameOver;
 import p_view.C_Game;
 /**
- * Autoren: Stephan Schellenberg, Jacob Waniek und Yannik Koesling
+ * @Autoren Stephan Schellenberg, Jacob Waniek und Yannik Koesling
  * Inhalt:  Ablauflogik Freier Modus
  */
 public class C_FreeMode extends Thread{

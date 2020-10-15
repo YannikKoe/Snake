@@ -2,7 +2,7 @@ package p_model;
 
 import java.util.concurrent.ThreadLocalRandom;
 /**
- * Autoren: Stephan Schellenberg, Jacob Waniek und Yannik Koesling
+ * @Autoren Stephan Schellenberg, Jacob Waniek und Yannik Koesling
  * Inhalt: Setter und Getter des Foods. Zufaellige Position fuer die Platzierung des Foods.
  */
 public class C_Food {

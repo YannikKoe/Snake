@@ -1,6 +1,6 @@
 package p_model;
 /**
- * Autoren: Stephan Schellenberg, Jacob Waniek und Yannik Koesling
+ * @Autoren Stephan Schellenberg, Jacob Waniek und Yannik Koesling
  * Inhalt: Setter und Getter (u.A. auch "wait" für den move) für den Body der Schlange
  */
 public class C_Body {

@@ -4,7 +4,8 @@ import javax.swing.*;
 
 import p_monitor.C_KeyHandler;
 /**
- * Autoren: Stephan Schellenberg, Jacob Waniek und Yannik Koesling
+ * @Autoren Stephan Schellenberg, Jacob Waniek und Yannik Koesling
+ * Inhalt: Haupt-Frame des Spiels
  * 
  */
 public class C_Game {
@@ -13,7 +14,8 @@ public class C_Game {
 
     public static int v_width = 800, v_height = 600;
     public static int v_xoff = 130, v_yoff = 20;
-
+    
+    //Erzeugung des Frames und Implementierung des Grids
     public void create(){
         o_gameFrame = new JFrame("Welcome to Snake!");
         o_gameFrame.setSize(v_width,v_height);

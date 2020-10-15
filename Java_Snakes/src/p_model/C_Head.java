@@ -1,6 +1,6 @@
 package p_model;
 /**
- * Autoren: Stephan Schellenberg, Jacob Waniek und Yannik Koesling
+ * @Autoren Stephan Schellenberg, Jacob Waniek und Yannik Koesling
  * Inhalt: Beinhaltet neben Setter und Getter die fuer den Keyhandler notwendige Methoden
  */
 public class C_Head {

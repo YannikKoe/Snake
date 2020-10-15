@@ -12,7 +12,7 @@ import p_view.C_GameOver;
 import p_view.C_Game;
 import p_view.C_StartMenue;
 /**
- * Autoren: Stephan Schellenberg, Jacob Waniek und Yannik Koesling
+ * @Autoren Stephan Schellenberg, Jacob Waniek und Yannik Koesling
  * Inhalt: Ereignisbehandler fuer die Frames und Buttons
  */
 public class C_ActionHandler implements ActionListener {
