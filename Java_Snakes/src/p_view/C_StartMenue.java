@@ -6,7 +6,7 @@ import javax.swing.*;
 import p_monitor.C_ActionHandler;
 
 /**
- * Autoren: Stephan Schellenberg, Jacob Waniek und Yannik Koesling
+ * @Autoren Stephan Schellenberg, Jacob Waniek und Yannik Koesling
  * Inhalt:  Erstellung einer GUI für das Startmenue
  * 
  */

@@ -12,7 +12,7 @@ import p_model.C_Snake;
 import p_monitor.C_ActionHandler;
 import p_monitor.C_KeyHandler;
 /**
- * Autoren: Stephan Schellenberg, Jacob Waniek und Yannik Koesling
+ * @Autoren Stephan Schellenberg, Jacob Waniek und Yannik Koesling
  * Inhalt:  Erstellung einer GUI für das Game Over Fenster
  */
 public class C_GameOver {

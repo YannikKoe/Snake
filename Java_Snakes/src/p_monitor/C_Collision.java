@@ -2,7 +2,7 @@ package p_monitor;
 
 import p_model.C_Snake;
 /**
- * Autoren: Stephan Schellenberg, Jacob Waniek und Yannik Koesling
+ * @Autoren Stephan Schellenberg, Jacob Waniek und Yannik Koesling
  * Inhalt:  Beinhaltet die Methoden zur Ueberpruefung ob eine Kollision der Schlange aufgetreten ist
  */
 public class C_Collision {

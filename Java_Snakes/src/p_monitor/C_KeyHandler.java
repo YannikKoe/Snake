@@ -11,7 +11,7 @@ import p_controller.C_StandardMode;
 import p_model.Enum_Route;
 import p_model.C_Snake;
 /**
- * Autoren: Stephan Schellenberg, Jacob Waniek und Yannik Kösling
+ * @Autoren Stephan Schellenberg, Jacob Waniek und Yannik Kösling
  * Inhalt: Beinhaltet die Ereignisbehandler der Tastatur
  */
 public class C_KeyHandler implements KeyListener {  

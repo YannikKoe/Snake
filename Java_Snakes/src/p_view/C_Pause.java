@@ -9,7 +9,7 @@ import javax.swing.JPanel;
 
 import p_monitor.C_KeyHandler;
 /**
- * Autoren: Stephan Schellenberg, Jacob Waniek und Yannik Koesling
+ * @Autoren Stephan Schellenberg, Jacob Waniek und Yannik Koesling
  * Inhalt:  Erstellung einer GUI für das Pause Fenster
  */
 public class C_Pause {

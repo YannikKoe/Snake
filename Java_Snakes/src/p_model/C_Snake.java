@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 import p_view.C_Game;
 /**
- * Autoren: Stephan Schellenberg, Jacob Waniek und Yannik Koesling
+ * @Autoren Stephan Schellenberg, Jacob Waniek und Yannik Koesling
  * Inhalt:  Beinhaltet die Logik der Schlange, sprich die Bewegung und die Organisation der Koerperteile und des Kopfes der Schlange
  */
 public class C_Snake {
